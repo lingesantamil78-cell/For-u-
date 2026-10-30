@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#6d203d" />
+  <title>A Little Friendship Gift</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="screen active" id="welcome">
+      <div class="tiny-label">A LITTLE GIFT · JUST FRIENDSHIP</div>
+      <div class="bouquet" aria-label="Flower bouquet">💐</div>
+      <h1>Something I wanted<br><em>you to read.</em></h1>
+      <p class="muted">No pressure. Just a small note from your friend.</p>
+      <button class="primary" data-next="gift">Open your gift <span>→</span></button>
+    </section>
+
+    <section class="screen" id="gift">
+      <div class="tiny-label">UNWRAP THIS LITTLE NOTE</div>
+      <div class="gift-wrap" id="giftWrap"><div class="gift-bow">🎀</div><div class="gift-box">🎁</div></div>
+      <h2>A small reminder</h2>
+      <p class="letter-short">I miss our old friendship. The random talks, daily updates and silly little moments. I’m not asking you to be available all the time. I just wanted you to know that this friendship matters to me.</p>
+      <button class="primary" data-next="questions">Continue <span>→</span></button>
+    </section>
+
+    <section class="screen" id="questions">
+      <div class="tiny-label">A FEW HONEST QUESTIONS</div>
+      <h2>Can I ask you something?</h2>
+      <p class="muted">Answer honestly. There’s no wrong answer.</p>
+      <div id="questionCard" class="question-card"></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <p class="progress-label" id="progressLabel">Question 1 of 8</p>
+      <button class="quiet" id="skipQuestions">Skip questions</button>
+    </section>
+
+    <section class="screen" id="letter">
+      <div class="tiny-label">A FRIENDSHIP NOTE</div>
+      <h2>One thing I want you to know</h2>
+      <div class="paper">
+        <p>Sometimes I feel like we’ve become distant. When I tell you I’m not okay, I miss the concern you used to show. I miss telling you little things and hearing about your day too.</p>
+        <p>When I said I deleted your number and you simply said “okay”, it hurt more than I expected. Maybe I’m overthinking some things, but these feelings are real to me.</p>
+        <p>I don’t want to force conversations or ask for all your time. I only want a friendship where both of us make an effort, even in small ways.</p>
+        <p class="signoff">This is friendship. No love story, no pressure. Just a friend who misses the bond we had. 🤍</p>
+      </div>
+      <button class="primary" data-next="notice">Next <span>→</span></button>
+    </section>
+
+    <section class="screen" id="notice">
+      <div class="tiny-label">OFFICIAL FRIENDSHIP NOTICE 😅</div>
+      <h2>Friendship “divorce” letter</h2>
+      <div class="paper notice-paper">
+        <p><strong>Notice:</strong> This friendship is <em>not</em> cancelled.</p>
+        <p>Temporary silence and personal space are allowed. But please don’t turn two friends into strangers without saying what changed.</p>
+        <p>Both sides deserve care, honesty and effort. No one has to reply instantly. A little communication is enough.</p>
+        <p class="signoff">Status: Still wishing you well. 🌷</p>
+      </div>
+      <button class="primary" data-next="signature">Continue <span>→</span></button>
+    </section>
+
+    <section class="screen" id="signature">
+      <div class="tiny-label">JUST TO KNOW YOU READ IT</div>
+      <h2>Sign this little note</h2>
+      <p class="muted">This is only an acknowledgement that you read the note — not a promise or agreement.</p>
+      <label class="field-label" for="signatureName">Your name / nickname</label>
+      <input id="signatureName" maxlength="40" placeholder="Type here…" autocomplete="off" />
+      <label class="field-label" for="replyNote">Anything you want to tell me? (optional)</label>
+      <textarea id="replyNote" maxlength="500" rows="3" placeholder="You can be honest…"></textarea>
+      <button class="primary" id="sendReply">Send acknowledgement <span>→</span></button>
+      <p class="save-status" id="saveStatus" role="status"></p>
+      <button class="quiet" data-next="ending">Skip this</button>
+    </section>
+
+    <section class="screen" id="ending">
+      <div class="bouquet small">🌷</div>
+      <div class="tiny-label">THAT’S ALL I WANTED TO SAY</div>
+      <h1>Take your space.<br><em>I’ll respect it.</em></h1>
+      <p class="letter-short">When you miss our friendship and feel ready, come back. I hope we can talk honestly and find our way as friends again. Until then, take care. No pressure. 🤍</p>
+      <p class="footer-note">A little friendship gift, made with care.</p>
+      <button class="quiet" id="restart">Read again ↺</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
